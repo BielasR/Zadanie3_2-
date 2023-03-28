@@ -8,24 +8,24 @@ public class Main
         System.out.print("Podaj ciąg znaków: ");
         String text = n.nextLine();
 
-        String result = "";
+        String wynik = "";
         for (int i = 0; i < text.length(); i++) 
         {
             char c = text.charAt(i);
             if (Character.isUpperCase(c)) 
             {
-                result += Character.toLowerCase(c);
+                wynik += Character.toLowerCase(c);
             } 
             else if (Character.isLowerCase(c)) 
              {
-                result += Character.toUpperCase(c);
+                wynik += Character.toUpperCase(c);
              } 
             else 
              {
-                result += c;
+                wynik += c;
              }
         }
 
-        System.out.println("Wynik: " + result);
+        System.out.println("Wynik: " + wynik);
     }
 }
