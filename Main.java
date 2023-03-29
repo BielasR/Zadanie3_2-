@@ -5,8 +5,9 @@ public class Main
     public static void main(String[] args) 
   {
         Scanner n = new Scanner(System.in);
-        System.out.print("Podaj ciąg znaków: ");
+        System.out.print("Podaj napis: ");
         String text = n.nextLine();
+        int l = 0;
 
         String wynik = "";
         for (int i = 0; i < text.length(); i++) 
@@ -15,10 +16,12 @@ public class Main
             if (Character.isUpperCase(c)) 
             {
                 wynik += Character.toLowerCase(c);
+                l++;
             } 
             else if (Character.isLowerCase(c)) 
              {
                 wynik += Character.toUpperCase(c);
+                l++;
              } 
             else 
              {
@@ -27,5 +30,6 @@ public class Main
         }
 
         System.out.println("Wynik: " + wynik);
+        System.out.println("Liczba zmienionych liter: " + l);
     }
 }
